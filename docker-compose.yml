@@ -29,11 +29,13 @@ services:
     #     networks: 
     #         - backend
     
-    # redis:
-    #     container_name: redis
-    #     image: redis
-    #     networks: 
-    #         - backend
+    redis:
+        container_name: redis
+        image: redis:6.0-rc2-alpine
+        volumes: 
+            - redis:/data
+        networks: 
+            - backend
     
     # celery:
     #     container_name: celery
