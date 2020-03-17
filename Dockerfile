@@ -1,11 +1,15 @@
-FROM python:3.7-alpine
+FROM python:3.7-slim
 
-RUN mkdir /home/application
+RUN mkdir /application
 
-WORKDIR /home/application
-
-RUN apk add --update gcc libssl-dev && rm -rf /var/cache/apk/* && cd /home/application
+WORKDIR /application
 
 COPY /app config.ini main.py requirements.txt ./
 
-RUN pip3 install --upgrade pip && pip3 install -r requirements.txt
+RUN apt-get update \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --upgrade pip \
+    && pip install -Ur requirements.txt
+
+ENTRYPOINT [ "python", "main.py" ]
