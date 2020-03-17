@@ -1,0 +1,42 @@
+version: '3.3'
+
+networks: 
+    frontend:
+    backend:
+
+volumes: 
+    postgres:
+    redis:
+
+services: 
+    # nginx:
+    #     container_name: nginx
+    #     ports: 
+    #         - 80:80
+    #         - 443:443
+    #     networks: 
+    #         - backend
+    #         - frontend
+    bot:
+        container_name: bot
+        build: .
+        networks: 
+            - backend
+    
+    # postgres:
+    #     container_name: postgres
+    #     image: postgres
+    #     networks: 
+    #         - backend
+    
+    # redis:
+    #     container_name: redis
+    #     image: redis
+    #     networks: 
+    #         - backend
+    
+    # celery:
+    #     container_name: celery
+    #     image: celery
+    #     networks: 
+    #         - backend
