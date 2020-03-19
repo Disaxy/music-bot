@@ -20,6 +20,8 @@ services:
     bot:
         container_name: bot
         build: .
+        ports: 
+            - 5000:5000
         networks: 
             - backend
     

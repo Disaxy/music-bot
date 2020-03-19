@@ -9,6 +9,8 @@ autopep8 = "*"
 [packages]
 aiogram = "*"
 loguru = "*"
+beautifulsoup4 = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.6"
