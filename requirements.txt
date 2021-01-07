@@ -1,21 +1,21 @@
--i https://pypi.org/simple
+-i https://pypi.org/simple/
 aiocontextvars==0.2.2 ; python_version < '3.7'
 aiogram==2.6.1
-aiohttp==3.6.2
+aiohttp==3.7.3
 async-timeout==3.0.1
-attrs==19.3.0
-babel==2.8.0
+attrs==20.3.0
+babel==2.9.0
 beautifulsoup4==4.8.2
-certifi==2019.11.28
+certifi==2020.12.5
 chardet==3.0.4
 contextvars==2.4 ; python_version < '3.7'
 idna-ssl==1.1.0 ; python_version < '3.7'
-idna==2.9
-immutables==0.11
+idna==3.1
+immutables==0.14
 loguru==0.4.1
-lxml==4.5.0
-multidict==4.7.5
-pytz==2019.3
-soupsieve==2.0
-typing-extensions==3.7.4.1 ; python_version < '3.7'
-yarl==1.4.2
+lxml==4.6.2
+multidict==5.1.0
+pytz==2020.5
+soupsieve==2.1
+typing-extensions==3.7.4.3 ; python_version < '3.8'
+yarl==1.6.3
